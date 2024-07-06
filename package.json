@@ -1,0 +1,34 @@
+{
+  "name": "jaggery",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riojosdev/jaggery.git"
+  },
+  "version": "0.0.1",
+  "description": "Jaggery is an frontend component library you can use for your own projects, it aims to support multiple frontend frameworks such as React, Solid, Vue, Angular",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist/ && prettier --write src/ && yarn run build:esm && yarn run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+  },
+  "author": "Rio Jos <riojosrj@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "prettier": "3.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
