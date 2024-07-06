@@ -8,11 +8,11 @@
 * Install using npm or yarn with the command
 
 ```
-npm install ~/directory/to/jaggery
+npm install https://github.com/riojosdev/jaggery.git
 
 # or
 
-yarn add ~/directory/to/jaggery
+yarn add https://github.com/riojosdev/jaggery.git
 ```
 
 ### Usage
