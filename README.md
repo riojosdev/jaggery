@@ -7,7 +7,7 @@
 * Clone this repo
 * Install using npm or yarn with the command
 
-```
+```bash
 npm install https://github.com/riojosdev/jaggery.git
 
 # or
@@ -51,3 +51,9 @@ function App() {
 
 export default App;
 ```
+
+## about
+
+### why
+
+to have better performance by using highly supported ui/ux components that are minimalistic themed designs, which promotes humane and mindful behaviour
