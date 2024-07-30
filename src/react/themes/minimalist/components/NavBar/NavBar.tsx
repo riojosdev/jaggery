@@ -72,20 +72,23 @@ export const NavBar: React.FC<INavBarProps> = (props) => {
         setHover(false);
     }
 
-    const pages = links.map((site: any) => {
-        return createElement(
-            'a',
-            {
-                href: site.url,
-                className: 'nav_urls',
-                key: site.name,
-                style: url_styles,
-                onMouseEnter: MouseOver(),
-                onMouseLeave: MouseOut()
-            },
-            site.name
-        );
-    });
+    let pages;
+    if (links) {
+        pages = links.map((site: any) => {
+            return createElement(
+                'a',
+                {
+                    href: site.url,
+                    className: 'nav_urls',
+                    key: site.name,
+                    style: url_styles,
+                    onMouseEnter: MouseOver(),
+                    onMouseLeave: MouseOut()
+                },
+                site.name
+            );
+        });
+    }
 
     // TODO: make the component responsive
     return (
