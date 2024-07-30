@@ -1,0 +1,19 @@
+## Compile a new Build
+
+From the working jaggery library directory run to compile a build for your changes
+
+```bash
+yarn build
+```
+
+> For testing on local cloned Jaggery, you can point the package.json dependencies definition of jaggery to the location where your locally cloned jaggery is.
+
+## Upgrade Dependencies
+
+Users of the modified library, have to run to stay updated with the changes
+
+```bash
+yarn upgrade jaggery
+```
+
+and then make necessary changes to the component definition accordingly
