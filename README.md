@@ -7,7 +7,7 @@
 * Clone this repo
 * Install using npm or yarn with the command
 
-```
+```bash
 npm install https://github.com/riojosdev/jaggery.git
 
 # or
@@ -41,7 +41,7 @@ function App() {
         <Button
           backgroundColor='black'
           color='red'
-          style={{ padding: 20 }}
+          // style={{ padding: 20 }} WRONG !! DO NOT USE STYLE DIRECTLY, IT REWRITES ALL EXISTING JAGGERY DEFINED STYLES
           onClick={ () => alert('Cha-Ching!')}
         >
           Hello Jaggery
@@ -51,3 +51,11 @@ function App() {
 
 export default App;
 ```
+
+## about
+
+### why
+
+to have better performance by using highly supported ui/ux components that are minimalistic themed designs, which promotes humane and mindful behaviour
+
+Jaggery will focus on implementing attractive mindful patterns to help build the indieweb, but also not sacrificing on the sweetness

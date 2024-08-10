@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/riojosdev/jaggery.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Jaggery is an frontend component library you can use for your own projects, it aims to support multiple frontend frameworks such as React, Solid, Vue, Angular",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -20,15 +20,13 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.14.9",
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
+    "@types/react-helmet": "^6.1.11",
     "prettier": "3.3.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-helmet": "^6.1.0",
     "typescript": "^5.5.3"
-  },
-  "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
   }
 }
