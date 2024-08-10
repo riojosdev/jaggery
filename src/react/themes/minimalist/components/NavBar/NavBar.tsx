@@ -1,4 +1,7 @@
-import React, { createElement, useState } from 'react';
+import React, {
+    createElement
+    // useState
+} from 'react';
 import { Helmet } from 'react-helmet';
 
 export interface INavBarProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -18,10 +21,9 @@ export interface INavBarProps extends React.DetailedHTMLProps<React.HTMLAttribut
 }
 
 export const NavBar: React.FC<INavBarProps> = (props) => {
-    const [hover, setHover] = useState<Boolean>(false);
+    // const [hover, setHover] = useState<Boolean>(false);
 
     const {
-        // children,
         color,
         width,
         height,
@@ -29,7 +31,7 @@ export const NavBar: React.FC<INavBarProps> = (props) => {
         display,
         marginTop,
         boxShadow,
-        backdropFilter,
+        // backdropFilter,
         backgroundColor,
         left,
         transform,
@@ -38,18 +40,18 @@ export const NavBar: React.FC<INavBarProps> = (props) => {
     } = props;
 
     let _style: React.CSSProperties = {
-        width: width ? width : '90%',
-        height: height ? height : '70px',
+        width: width ? width : '85%',
+        height: height ? height : '65px',
         marginTop: marginTop ? marginTop : '15px',
-        boxShadow: boxShadow ? boxShadow : '0px 0.4px 3px #000000',
-        backdropFilter: backdropFilter ? backdropFilter : 'blur(7px)',
+        boxShadow: boxShadow ? boxShadow : '2px 3.4px 2px rgba(0, 0, 0, 0.2)',
+        // backdropFilter: backdropFilter ? backdropFilter : 'blur(7px)',
         position: position ? position : 'fixed',
-        backgroundColor: backgroundColor ? backgroundColor : 'rgba(0, 0, 0, 0.05)',
+        backgroundColor: backgroundColor ? backgroundColor : 'rgba(255, 255, 255, 0.26)',
         color: color ? color : 'black',
         display: display ? display : 'flex',
         left: left ? left : '50%',
         transform: transform ? transform : 'translate(-50%, 0)',
-        borderRadius: borderRadius ? borderRadius : '1rem',
+        borderRadius: borderRadius ? borderRadius : '0.9rem',
         justifyContent: 'center'
     };
 
@@ -60,16 +62,15 @@ export const NavBar: React.FC<INavBarProps> = (props) => {
         fontOpticalSizing: 'auto',
         fontWeight: '10px',
         fontStyle: 'normal',
-        color: hover ? 'white' : 'black',
-        // color: 'black',
+        color: 'black',
         textDecoration: 'none'
     };
 
-    function MouseOver() {
-        setHover(true);
+    function MouseOver(e: any) {
+        e.target.style.color = 'white';
     }
-    function MouseOut() {
-        setHover(false);
+    function MouseOut(e: any) {
+        e.target.style.color = 'black';
     }
 
     let pages;
@@ -79,11 +80,11 @@ export const NavBar: React.FC<INavBarProps> = (props) => {
                 'a',
                 {
                     href: site.url,
-                    className: 'nav_urls',
+                    className: `nav_urls_${site.name}`,
                     key: site.name,
                     style: url_styles,
-                    onMouseEnter: MouseOver(),
-                    onMouseLeave: MouseOut()
+                    onMouseEnter: (e) => MouseOver(e),
+                    onMouseLeave: (e) => MouseOut(e)
                 },
                 site.name
             );
