@@ -28,9 +28,7 @@ const react_1 = __importStar(require("react"));
 const react_helmet_1 = require("react-helmet");
 const NavBar = (props) => {
     // const [hover, setHover] = useState<Boolean>(false);
-    const { 
-    // children,
-    color, width, height, position, display, marginTop, boxShadow, 
+    const { color, width, height, position, display, marginTop, boxShadow, 
     // backdropFilter,
     backgroundColor, left, transform, borderRadius, links } = props;
     let _style = {

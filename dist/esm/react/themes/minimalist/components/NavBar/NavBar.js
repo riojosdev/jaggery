@@ -4,9 +4,7 @@ import React, { createElement
 import { Helmet } from 'react-helmet';
 export const NavBar = (props) => {
     // const [hover, setHover] = useState<Boolean>(false);
-    const { 
-    // children,
-    color, width, height, position, display, marginTop, boxShadow, 
+    const { color, width, height, position, display, marginTop, boxShadow, 
     // backdropFilter,
     backgroundColor, left, transform, borderRadius, links } = props;
     let _style = {
