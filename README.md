@@ -5,7 +5,7 @@
 ### Install
 
 * Clone this repo
-* Install using npm or yarn with the command
+* Install using npm, yarn or pnpm with the command
 
 ```bash
 npm install https://github.com/riojosdev/jaggery.git
@@ -13,6 +13,10 @@ npm install https://github.com/riojosdev/jaggery.git
 # or
 
 yarn add https://github.com/riojosdev/jaggery.git
+
+# or 
+
+pnpm install https://github.com/riojosdev/jaggery.git
 ```
 
 ### Usage
@@ -24,7 +28,7 @@ yarn add https://github.com/riojosdev/jaggery.git
 ```js
 import { Button } from 'jaggery'
 const MyButton = () => {
-  return <Button>Jaggery Button</<Button>
+  return <Button>Jaggery Button</Button>
 };
 ```
 
@@ -33,24 +37,25 @@ const MyButton = () => {
 After installing jaggery as a dependency, in your `App.tsx` run the code below
 
 ```js
-import React from 'react';
-import { Button } from 'jaggery';
+import { NavBar } from 'jaggery';
 
 function App() {
-  return (
-        <Button
-          backgroundColor='black'
-          color='red'
-          // style={{ padding: 20 }} WRONG !! DO NOT USE STYLE DIRECTLY, IT REWRITES ALL EXISTING JAGGERY DEFINED STYLES
-          onClick={ () => alert('Cha-Ching!')}
-        >
-          Hello Jaggery
-        </Button>
-  );
+    return (
+        <NavBar
+            links={[
+                { name: 'home', url: 'https://example.com/' },
+                { name: 'about', url: 'https://example.com/' },
+                { name: 'contact', url: 'https://example.com/' }
+            ]}
+            // define upto 6 links, to maintain responsiveness
+        />
+    );
 }
 
 export default App;
 ```
+
+> Note: You need to delete your `node_modules` & the package manager lock file (npm => package-lock.json, yarn => yarn.lock, pnpm => pnpm-lock.yaml) to recompile Jaggery with `create-react-app`
 
 ## about
 
